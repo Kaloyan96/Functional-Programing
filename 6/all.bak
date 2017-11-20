@@ -1,0 +1,4 @@
+#lang racket
+
+(define (dimensions targetMatrix)
+  (cons (length targetMatrix) (length (car targetMatrix))))

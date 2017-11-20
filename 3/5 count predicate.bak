@@ -1,0 +1,9 @@
+#lang racket
+
+(define (accumulate-iter combiner null-value term a next b)
+  (define (iter acc a)
+    (if (> a b)
+        acc
+        (iter (combiner (term a) acc) (next a))))
+
+  (iter null-value a))
